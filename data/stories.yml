@@ -1,0 +1,518 @@
+version: "3.1"
+
+stories:
+  - story: greet and ask question
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_question
+      - action: utter_redirect_to_help
+
+  - story: greet and neutral response
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: neutral_response
+      - action: utter_greet_follow_up_neutral
+      - action: utter_redirect_to_help
+
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_greet_follow_up_happy
+      - intent: affirm
+      - action: utter_affirm_great_to_hear
+      - action: utter_redirect_to_help
+
+  - story: neutral path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: neutral_response
+      - action: utter_greet_follow_up_neutral
+      - action: utter_redirect_to_help
+
+  - story: sad path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_greet_follow_up_sad
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+      - action: utter_redirect_to_help
+
+  - story: ask bot how it is
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_bot_how_are_you
+      - action: utter_ask_bot_how_are_you
+      - action: utter_redirect_to_help
+
+  - story: ask a question
+    steps:
+      - intent: ask_question
+      - action: utter_ask_question
+
+
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: user asks for gym hours
+    steps:
+      - intent: ask_gym_hours
+      - action: utter_gym_hours
+
+  - story: user asks about membership process
+    steps:
+      - intent: ask_membership_process
+      - action: utter_membership_process
+
+  - story: user asks about contract information
+    steps:
+      - intent: ask_contract_info
+      - action: utter_contract_info
+
+  - story: user asks for gym location
+    steps:
+      - intent: ask_gym_location
+      - action: utter_gym_location
+
+  - story: user asks for payment information
+    steps:
+      - intent: ask_payment_info
+      - action: utter_payment_info
+
+  - story: user asks about affiliates
+    steps:
+      - intent: ask_affiliates
+      - action: utter_affiliates
+
+  - story: user asks about gym history
+    steps:
+      - intent: ask_about_history
+      - action: utter_about_history
+
+  - story: user asks about community involvement
+    steps:
+      - intent: ask_about_community
+      - action: utter_about_community
+
+  - story: user asks about future plans
+    steps:
+      - intent: ask_about_future
+      - action: utter_about_future
+
+  - story: user asks about wellness programs
+    steps:
+      - intent: ask_wellness_programs
+      - action: utter_wellness_programs
+
+  - story: user asks about event schedule
+    steps:
+      - intent: ask_event_schedule
+      - action: utter_event_schedule
+
+  - story: user asks about class schedule
+    steps:
+      - intent: ask_class_schedule
+      - action: utter_class_schedule
+
+  - story: membership details
+    steps:
+      - intent: ask_membership_process
+      - action: utter_membership_process
+      - intent: ask_contract_info
+      - action: utter_contract_info
+
+  - story: gym location and payment info
+    steps:
+      - intent: ask_gym_location
+      - action: utter_gym_location
+      - intent: ask_payment_info
+      - action: utter_payment_info
+
+  - story: about AVS Fitness
+    steps:
+      - intent: ask_about_history
+      - action: utter_about_history
+      - intent: ask_about_community
+      - action: utter_about_community
+      - intent: ask_about_future
+      - action: utter_about_future
+
+  - story: wellness and events
+    steps:
+      - intent: ask_wellness_programs
+      - action: utter_wellness_programs
+      - intent: ask_event_schedule
+      - action: utter_event_schedule
+
+  - story: get_involved
+    steps:
+      - intent: get_involved
+      - action: utter_get_involved
+
+  - story: partnering_with_leaders
+    steps:
+      - intent: partnering_with_leaders
+      - action: utter_partnering_with_leaders
+
+  - story: forgot_password_help
+    steps:
+      - intent: forgot_password_help
+      - action: utter_forgot_password_help
+
+  - story: rewards
+    steps:
+      - intent: rewards
+      - action: utter_rewards
+
+  - story: exclusive_discounts
+    steps:
+      - intent: exclusive_discounts
+      - action: utter_exclusive_discounts
+
+  - story: health_tips
+    steps:
+      - intent: health_tips
+      - action: utter_health_tips
+
+  - story: senior_fitness_support
+    steps:
+      - intent: senior_fitness_support
+      - action: utter_senior_fitness_support
+
+  - story: youth_fitness_initiative
+    steps:
+      - intent: youth_fitness_initiative
+      - action: utter_youth_fitness_initiative
+
+  - story: user asks to book a program
+    steps:
+      - intent: ask_book_program
+      - action: utter_ask_book_program
+
+  - story: user asks to view bookings
+    steps:
+      - intent: ask_view_bookings
+      - action: utter_ask_view_bookings
+
+  - story: user asks to edit a booking
+    steps:
+      - intent: ask_edit_booking
+      - action: utter_ask_edit_booking
+
+  - story: user asks to delete a booking
+    steps:
+      - intent: ask_delete_booking
+      - action: utter_ask_delete_booking
+
+  - story: user has booking issue
+    steps:
+      - intent: ask_booking_issue
+      - action: utter_ask_booking_issue
+
+  - story: user asks about no slots available
+    steps:
+      - intent: ask_no_slots_available
+      - action: utter_ask_no_slots_available
+
+  - story: user asks to navigate back
+    steps:
+      - intent: ask_back_navigation
+      - action: utter_ask_back_navigation
+
+  - story: user asks to contact support
+    steps:
+      - intent: ask_contact_support
+      - action: utter_ask_contact_support
+
+  - story: user asks about wishlist
+    steps:
+      - intent: ask_wishlist
+      - action: utter_ask_wishlist
+
+  - story: user asks about cart
+    steps:
+      - intent: ask_cart
+      - action: utter_ask_cart
+
+  - story: user asks for help
+    steps:
+      - intent: ask_help
+      - action: utter_ask_help
+
+  - story: user asks about search functionality
+    steps:
+      - intent: ask_search
+      - action: utter_ask_search
+
+  - story: user asks about sidebar
+    steps:
+      - intent: ask_sidebar
+      - action: utter_ask_sidebar
+
+  - story: user asks about product details
+    steps:
+      - intent: ask_product_details
+      - action: utter_ask_product_details
+
+  - story: user asks about managing wishlist
+    steps:
+      - intent: ask_wishlist_management
+      - action: utter_ask_wishlist_management
+
+  - story: user asks about checkout process
+    steps:
+      - intent: ask_checkout
+      - action: utter_ask_checkout
+
+  - story: user asks about order management
+    steps:
+      - intent: ask_order_management
+      - action: utter_ask_order_management
+
+  - story: free trial process
+    steps:
+      - intent: ask_free_trial
+      - action: utter_ask_free_trial
+
+  - story: bringing ID and code
+    steps:
+      - intent: bring_id_and_code
+      - action: utter_bring_id_and_code
+
+  - story: malicious use consequences
+    steps:
+      - intent: ask_malicious_use
+      - action: utter_ask_malicious_use
+
+  - story: general inquiries
+    steps:
+      - intent: general_inquiry
+      - action: utter_general_inquiry
+
+  - story: most beautiful woman
+    steps:
+      - intent: most_beautiful_woman
+      - action: utter_most_beautiful_woman
+
+  - story: tell current time
+    steps:
+      - intent: tell_time
+      - action: utter_tell_time
+
+  - story: tell current date
+    steps:
+      - intent: tell_date
+      - action: utter_tell_date
+
+  - story: ask past date
+    steps:
+      - intent: ask_past_date
+        entities:
+          - time_interval: "5 days"
+      - action: utter_past_date
+
+  - story: ask future date
+    steps:
+      - intent: ask_future_date
+        entities:
+          - time_interval: "3 days"
+      - action: utter_future_date
+
+  - story: how to use the bot
+    steps:
+      - intent: how_to_use_me
+      - action: utter_how_to_use_me
+
+  - story: what can you do
+    steps:
+      - intent: what_can_you_do
+      - action: utter_what_can_you_do
+
+  - story: log in information
+    steps:
+      - intent: log_in_information
+      - action: utter_log_in_information
+
+  - story: app features inquiry
+    steps:
+      - intent: app_features
+      - action: utter_app_features
+
+  - story: app download inquiry
+    steps:
+      - intent: app_download
+      - action: utter_app_download
+
+  - story: app support inquiry
+    steps:
+      - intent: app_support
+      - action: utter_app_support
+
+  - story: app updates inquiry
+    steps:
+      - intent: app_updates
+      - action: utter_app_updates
+
+  - story: app login issues inquiry
+    steps:
+      - intent: app_login_issues
+      - action: utter_app_login_issues
+
+  - story: app privacy inquiry
+    steps:
+      - intent: app_privacy
+      - action: utter_app_privacy
+
+  - story: handle_off_topic_general_query
+    steps:
+      - intent: off_topic_general
+      - action: utter_off_topic_general
+      - action: utter_suggest_gym_queries
+
+  - story: Ask_what_products
+    steps:
+      - intent: Ask_what_products
+      - action: utter_what_products
+   
+  - story: Ask_discounts_specials
+    steps:
+      - intent: Ask_discounts_specials
+      - action: utter_discounts_specials
+
+
+  - story: Ask_most_popular_product
+    steps:
+      - intent: Ask_most_popular_product
+      - action: utter_most_popular_product
+
+  - story: Ask_worst_product
+    steps:
+      - intent: Ask_worst_product
+      - action: utter_worst_product
+
+  - story: Ask_are_products_affordable
+    steps:
+      - intent: Ask_are_products_affordable
+      - action: utter_are_products_affordable
+
+  - story: Ask_any_free_products
+    steps:
+      - intent: Ask_any_free_products
+      - action: utter_any_free_products
+
+  - story: Ask_most_expensive_product
+    steps:
+      - intent: Ask_most_expensive_product
+      - action: utter_most_expensive_product
+
+  - story: Ask_recommend_buy
+    steps:
+      - intent: Ask_recommend_buy
+      - action: utter_recommend_buy
+
+  - story: Ask_sizes_on_offer
+    steps:
+      - intent: Ask_sizes_on_offer
+      - action: utter_sizes_on_offer
+
+  - story: Ask_arrival_time
+    steps:
+      - intent: Ask_arrival_time
+      - action: utter_time_before_arrival
+
+  - story: Ask_late_fee
+    steps:
+      - intent: Ask_late_fee
+      - action: utter_late_fee
+
+  - story: Ask_materials_used
+    steps:
+      - intent: Ask_materials_used
+      - action: utter_materials_used_mostly
+
+  - story: Ask_collection_info
+    steps:
+      - intent: Ask_collection_info
+      - action: utter_what_to_bring_for_collection
+
+  - story: Ask_supplier_names
+    steps:
+      - intent: Ask_supplier_names
+      - action: utter_supplier_names
+
+  - story: Ask_supplier_products
+    steps:
+      - intent: Ask_supplier_products
+      - action: utter_supplier_products
+
+  - story: Ask_supplier_count
+    steps:
+      - intent: Ask_supplier_count
+      - action: utter_supplier_count
+
+  - story: What_sets_apart_from_other_gyms
+    steps:
+      - intent: Ask_what_sets_apart_from_other_gyms
+      - action: utter_what_sets_apart
+
+  - story: What_sets_AVS_apart
+    steps:
+      - intent: Ask_what_sets_AVS_apart
+      - action: utter_what_sets_AVS_apart
+
+  - story: What_different_about_gym
+    steps:
+      - intent: Ask_what_different_about_gym
+      - action: utter_what_different
+
+  - story: What_unique_offer
+    steps:
+      - intent: Ask_what_unique_offer
+      - action: utter_what_unique_offer
+
+  - story: How_different_from_competitors
+    steps:
+      - intent: Ask_how_different_from_competitors
+      - action: utter_how_different_competitors
+
+  - story: Why_AVS_Fitness
+    steps:
+      - intent: Why_AVS_Fitness
+      - action: utter_why_AVS_Fitness
+
+  - story: Ask_member_count
+    steps:
+      - intent: Ask_member_count
+      - action: utter_how_many_members
+
+  - story: Ask_employee_count
+    steps:
+      - intent: Ask_employee_count
+      - action: utter_how_many_employees
+
+  - story: Best_protein_brand
+    steps:
+      - intent: Best_protein_brand
+      - action: utter_best_protein_brand
+      - action: utter_which_protein
+
+  - story: Why_protein_important
+    steps:
+      - intent: Ask_protein_advice
+      - action: utter_why_protein_important
+
+  - story: Ask_what_Is_Your_Store
+    steps:
+      - intent: Ask_what_Is_Your_Store
+      - action: utter_Ask_what_Is_Your_Store

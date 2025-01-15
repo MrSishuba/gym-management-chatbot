@@ -1,0 +1,862 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - sup
+      - what up
+      - ekse
+      - what Kind
+      - dag Se
+      - molo
+      - whatsup
+      - what is up
+      - Oi
+      - top of the morning
+      - top o da morning
+      - morning
+      - afternoon
+      - evening
+      - good day
+      - hale
+      - greetings
+      - salutations
+      - bro
+      - yo
+      - yo man
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - see you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - chow
+      - check you later
+      - until next time
+      - you be easy now 
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - bet
+      - straight
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - nah
+      - absolutely not
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+      - good
+      - just fine
+      - just good
+      - happy
+      - ecstatic
+      - stoked
+      - real good
+      - so real
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremely sad
+      - so sad
+      - melancholic
+      - dreadful
+      - overworked
+      - tired
+      - upset
+      - depressed
+      - down bad
+      - down horrendous
+      - I don't feel so good
+
+  - intent: ask_bot_how_are_you
+    examples: |
+      - how are you?
+      - how's it going?
+      - how are you doing?
+      - what's up with you?
+      - how are you feeling?
+      - what’s going on with you?
+      - how's everything with you?
+      - You good?
+      - You straight?
+      - You Ayt
+      - What Kind
+      - Howzit
+      - how's everything with you?
+      - are you alright?
+      - are you ok?
+      - you good?
+      - how you been?
+      - good and you 
+      - fine and you
+
+  - intent: ask_question
+    examples: |
+      - I have a question
+      - can I ask you something?
+      - tell me something
+      - I need to know something
+      - can you answer a question?
+      - question?
+      - I gotta ask
+      - Gotta ask
+      - tell me
+      
+
+  - intent: neutral_response
+    examples: |
+      - I'm fine
+      - I'm okay
+      - it's alright
+      - just okay
+      - I'm doing alright
+      - nothing much
+      - just fine
+      - ayt
+      - ok and you
+      - k u
+      - okay
+      - okay and u
+      
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - what are you?
+      - who created you?
+      - why were you created?
+      - are you real?
+      - what can you even do?
+      - tell me about yourself
+      - tell me bout ur self
+      - tell me about usrself
+
+  - intent: ask_gym_hours
+    examples: |
+      - What are the gym hours?
+      - When is the gym open?
+      - Can you tell me the opening times of AVS Fitness?
+      - What time do you open and close?
+      - When can I come to the gym?
+      - Gym hours?
+      - How long is the gym open on weekends?
+      - What are your business hours?
+
+  - intent: ask_membership_process
+    examples: |
+      - How do I become a member?
+      - How can I join the gym?
+      - What is the membership process?
+      - How do I register?
+      - I want to join AVS Fitness, how do I do that?
+      - How can I sign up?
+      - Membership steps?
+      - What do I need to do to become a member?
+      - How does one become a member of the gym?
+
+  - intent: ask_contract_info
+    examples: |
+      - Can you tell me about the contract?
+      - What are the details of the membership contract?
+      - What kind of contracts do you offer?
+      - Can you explain the contract types?
+      - What’s the contract pricing?
+      - Tell me about contract termination
+      - What is the contract termination policy?
+      - When can I cancel my contract?
+
+  - intent: ask_gym_location
+    examples: |
+      - Where is the gym located?
+      - Where can I find AVS Fitness?
+      - What is the address of the gym?
+      - How can I find the gym?
+      - Where is your gym?
+      - Location of AVS Fitness?
+      - Where do I go to hand in my documents?
+
+  - intent: ask_payment_info
+    examples: |
+      - How much does the membership cost?
+      - What is the membership fee?
+      - What are the monthly fees?
+      - How do I pay for the membership?
+      - How does payment work?
+      - Can I pay online?
+      - Tell me about the payment process?
+      - How much do I have to pay each month?
+
+  - intent: ask_affiliates
+    examples: |
+      - What are AVS Fitness' affiliates?
+      - Who are you affiliated with?
+      - Can you tell me about the affiliations?
+      - What companies do you partner with?
+      - Who are your outreach partners?
+      - Tell me about your affiliations
+
+  - intent: ask_about_history
+    examples: |
+      - Tell me about the history of AVS Fitness.
+      - How did AVS Fitness start?
+      - What is the story behind AVS Fitness?
+      - When was AVS Fitness founded?
+      - How did AVS Fitness grow over the years?
+      - What is the origin of AVS Fitness?
+
+  - intent: ask_about_community
+    examples: |
+      - What does AVS Fitness do for the community?
+      - How does AVS Fitness engage with the local community?
+      - Do you host any community events?
+      - How can I get involved in AVS Fitness events?
+      - What community initiatives does AVS Fitness support?
+
+  - intent: ask_about_future
+    examples: |
+      - What are the future plans for AVS Fitness?
+      - Is AVS Fitness planning to expand?
+      - What can we expect from AVS Fitness in the future?
+      - Are there any new programs coming to AVS Fitness?
+      - What’s next for AVS Fitness?
+
+  - intent: ask_wellness_programs
+    examples: |
+      - Do you offer wellness programs?
+      - Tell me about the wellness services at AVS Fitness.
+      - What wellness programs are available at AVS Fitness?
+      - Do you provide nutritional counseling?
+      - Are there mental health services at AVS Fitness?
+
+  - intent: ask_event_schedule
+    examples: |
+      - Are there any upcoming events at AVS Fitness?
+      - What events are you hosting this month?
+      - Can you tell me about AVS Fitness events?
+      - Is there a schedule for fitness challenges?
+      - What events are planned for the gym community?
+
+  - intent: ask_class_schedule
+    examples: |
+      - What is the class schedule at AVS Fitness?
+      - What fitness classes do you offer?
+      - Can you tell me the times for fitness classes?
+      - How do I sign up for classes?
+      - Are classes included with my membership?
+
+  - intent: get_involved
+    examples: |
+      - How can I get involved in the programs?
+      - Tell me more about the outreach programs.
+      - How can I participate in AV Motion programs?
+      - I want to help with youth fitness initiatives.
+      - How do I offer senior fitness support?
+
+  - intent: partnering_with_leaders
+    examples: |
+      - Which brands are AV Motion partnering with?
+      - Tell me about your industry collaborations.
+      - Who are your partners in fitness?
+      - What companies are you working with?
+      - Can you tell me more about your industry leaders' partnerships?
+
+  - intent: forgot_password_help
+    examples: |
+      - I forgot my password, help!
+      - How do I reset my password?
+      - Can you help me recover my password?
+      - I need a password reset.
+      - I can't remember my login details.
+
+  - intent: rewards
+    examples: |
+      - How do I earn rewards at AV Motion?
+      - Tell me about the reward system.
+      - Can I get points for workouts?
+      - What are the rewards for working out?
+      - How does your rewards system work?
+
+  - intent: exclusive_discounts
+    examples: |
+      - Are there any discounts for gym members?
+      - How can I get exclusive discounts?
+      - Do you offer discounts for AV Motion members?
+      - What exclusive discounts are available?
+      - Are there special offers for gym members?
+
+  - intent: health_tips
+    examples: |
+      - Give me some health tips.
+      - How can I improve my nutrition?
+      - Tell me how to stay hydrated and healthy.
+      - What are your top health tips?
+      - Do you have any fitness tips?
+
+  - intent: senior_fitness_support
+    examples: |
+      - How can seniors stay active at your gym?
+      - Do you have fitness programs for seniors?
+      - How can AV Motion help seniors stay fit?
+      - What fitness support do you provide for the elderly?
+      - Can you tell me about senior fitness programs?
+
+  - intent: youth_fitness_initiative
+    examples: |
+      - What is your Youth Fitness Initiative?
+      - How does AV Motion engage youth in fitness?
+      - Tell me about your programs for young people.
+      - How do you promote fitness to local youth?
+      - What are the youth fitness activities at AV Motion?
+
+  - intent: ask_book_program
+    examples: |
+        - How do I book a program?
+        - I want to book a program
+        - Can you help me book a program?
+        - What's the process to book a program?
+        - How do I book
+        - How to book a class
+        - How to book for a lesson plan
+        - How to book lesson plan
+        - How to book class
+        
+  
+  - intent: ask_view_bookings
+    examples: |
+      - How do I view my bookings?
+      - Show me my current bookings
+      - Can I see my bookings?
+      - Where can I find my bookings?
+
+  - intent: ask_edit_booking
+    examples: |
+      - How do I edit a booking?
+      - I need to change my booking
+      - Can I modify my booking?
+      - How can I reschedule my booking?
+
+  - intent: ask_delete_booking
+    examples: |
+      - How do I cancel a booking?
+      - I want to delete my booking
+      - Can I cancel my booking?
+      - How do I remove a booking?
+
+  - intent: ask_booking_issue
+    examples: |
+      - My bookings are not displaying
+      - I can't see my bookings
+      - Why can't I view my bookings?
+      - Bookings are not loading
+
+  - intent: ask_no_slots_available
+    examples: |
+      - There are no available slots
+      - I can't find an available time slot
+      - Why are there no slots available?
+      - No slots are showing for the program
+
+  - intent: ask_back_navigation
+    examples: |
+      - How do I go back?
+      - I want to return to the previous page
+      - Is there a back button?
+      - How can I return to the home screen?
+
+  - intent: ask_contact_support
+    examples: |
+      - How do I contact support?
+      - I need help with bookings
+      - Can you help me with an issue?
+      - Who can I contact for help?
+
+  - intent: ask_wishlist
+    examples: |
+      - What is the wishlist icon?
+      - How do I use the wishlist icon?
+      - Can you help me with the wishlist?
+
+  - intent: ask_cart
+    examples: |
+      - Tell me about the cart icon
+      - What does the cart icon do?
+      - How can I view my cart?
+
+  - intent: ask_help
+    examples: |
+      - I need help with the help icon
+      - What does the help icon do?
+      - Can you explain the help section?
+
+  - intent: ask_search
+    examples: |
+      - How do I use the search bar?
+      - What is the search bar for?
+      - Can you help me with searching for products?
+
+  - intent: ask_sidebar
+    examples: |
+      - How do I filter products by category?
+      - What does the sidebar do?
+      - How do I use the category filter sidebar?
+
+  - intent: ask_product_details
+    examples: |
+      - Tell me about viewing product details
+      - How can I select size for a product?
+      - What do I do to add a product to my cart?
+
+  - intent: ask_wishlist_management
+    examples: |
+      - How do I move items from my wishlist to the cart?
+      - How can I remove an item from my wishlist?
+      - What should I do if my wishlist is empty?
+
+  - intent: ask_checkout
+    examples: |
+      - How do I proceed to checkout?
+      - What is the checkout process?
+      - Can you help me with payment options?
+
+  - intent: ask_order_management
+    examples: |
+      - How can I view my orders?
+      - What details are shown in my order history?
+      - How do I track my past orders?
+
+  - intent: ask_free_trial
+    examples: |
+      - How can I start a free trial?
+      - What is the process for a free trial?
+      - Can I get a free trial at AVS Fitness?
+      - Tell me about free trials
+      - How do I sign up for a free trial?
+
+  - intent: bring_id_and_code
+    examples: |
+      - Do I need to bring my ID and code?
+      - What should I bring for the free trial?
+      - Will I need my ID card and code?
+      - What documents are needed for the free trial?
+
+  - intent: most_beautiful_woman
+    examples: |
+      - Who is the most beautiful woman in the world?
+      - Who is the golden standard for beauty?
+      - Tell me about the number 1 woman in the world.
+      - Who is the top woman in terms of beauty?
+      - Who is the world's most stunning woman?
+      - Who defines beauty?
+      - Who is considered the most beautiful woman ever?
+      - Who is the epitome of beauty?
+      - Which woman stands above all others in beauty?
+      - Who is recognized as the most beautiful woman?
+      - When you think of beauty, elegance and sophistication which woman on earth alone exemplifies this?
+
+  - intent: ask_malicious_use
+    examples: |
+      - What happens if I misuse the free trial?
+      - Can I be banned from the gym for exploiting the free trial?
+      - What are the consequences of malicious behavior with the free trial?
+
+  - intent: general_inquiry
+    examples: |
+      - What equipment does the gym have?
+      - What classes do you offer?
+      - Is there a parking facility?
+      - Can I get a personal trainer?
+      - What are the gym rules?
+      - How do I cancel my membership?
+      - What amenities are available at the gym?
+      - Is there a sauna or pool in the gym?
+      - How many staff workers are at the gym on a shift usually?
+      - What is the gym contact number?
+      - what is the gym contact email?
+      - what is the technical support number?
+      - what is the technical support email?
+      - Who is the owner of AVS Fitness?
+
+  - intent: tell_time
+    examples: |
+      - What time is it now?
+      - Can you tell me the current time?
+      - What's the time right now?
+      - Do you know the time?
+
+  - intent: tell_date
+    examples: |
+      - What's the date today?
+      - Can you tell me today's date?
+      - What day is it today?
+      - What's today's date?
+      - What date is it today?
+
+  - intent: ask_past_date
+    examples: |
+      - What was the date 5 days ago?
+      - What was the time 3 hours ago?
+      - Can you tell me the date last week?
+      - What date was it 10 days ago?
+
+  - intent: ask_future_date
+    examples: |
+      - What will the time be 2 hours from now?
+      - What will the date be next Monday?
+      - What's the date 3 days from now?
+      - What date will it be in 5 weeks?
+
+  - intent: how_to_use_me
+    examples: |
+      - How do I use this chatbot?
+      - What is the best way to use you?
+      - How can I interact with this system?
+      - Tell me how to operate this chatbot.
+      - Can you explain how to use this platform?
+      - How do I navigate this chatbot?
+      - What do I need to do to start using you?
+      - Guide me through using this system.
+      - What are the steps to use this bot?
+      - Explain how this chatbot works.
+      - How do you work
+
+  - intent: what_can_you_do
+    examples: |
+      - What can you do?
+      - What features do you have?
+      - What are your capabilities?
+      - Can you tell me what you're able to do?
+      - What services do you provide?
+      - What tasks can you assist with?
+      - What kind of help can I expect from you?
+      - List the things you can do for me.
+      - Describe your functions.
+      - What are the things you can handle?
+      - Who are your answers for
+
+  - intent: log_in_information
+    examples: |
+      - How do I log in?
+      - What information do I need to log in?
+      - Can you guide me through logging in?
+      - What are the steps to log in?
+      - How can I access my account?
+      - Tell me how to log into the system.
+      - What credentials do I need to log in?
+      - How do I enter my username and password?
+      - Help me with the login process.
+      - What’s the procedure to log into my account?
+
+  - intent: app_features
+    examples: |
+      - What features does the AV Motion Mobile App offer?
+      - Tell me about the AV Motion app features.
+      - What can I do with the AV Motion mobile app?
+      - What functionalities does AV Motion app provide?
+      - What services are available in the AV Motion app?
+
+  - intent: app_download
+    examples: |
+      - How can I download the AV Motion Mobile App?
+      - Where can I get the AV Motion app?
+      - Is the AV Motion app available on the Play Store?
+      - Can I download the AV Motion app on iOS?
+      - Is the AV Motion app free to download?
+
+  - intent: app_support
+    examples: |
+      - How can I contact support for AV Motion Mobile App?
+      - What should I do if I have issues with the app?
+      - Who do I contact for technical support with the AV Motion app?
+      - How can I get help with the AV Motion app?
+      - Is there a support team for the AV Motion app?
+
+  - intent: app_updates
+    examples: |
+      - How do I update the AV Motion app?
+      - Are there new features in the latest AV Motion update?
+      - How can I check for updates in the AV Motion app?
+      - How often does the AV Motion app get updated?
+      - What is new in the latest version of AV Motion Mobile?
+
+  - intent: app_login_issues
+    examples: |
+      - I'm having trouble logging into the AV Motion app.
+      - What should I do if I can't log into my AV Motion account?
+      - How can I reset my password for the AV Motion app?
+      - Why can't I access my account on the AV Motion mobile app?
+      - How do I recover my AV Motion account?
+
+  - intent: app_privacy
+    examples: |
+      - What is the privacy policy of the AV Motion Mobile App?
+      - How does the AV Motion app handle user data?
+      - Is my data safe on the AV Motion app?
+      - Does the AV Motion app share my personal information?
+      - How does AV Motion protect my privacy?
+
+  - intent: off_topic_general
+    examples: |
+      - Tell me a joke
+      - Generate something
+      - Do something cool
+      - Write me a poem
+      - Tell me a fun fact
+      - Name 5 animals
+      - Name 10 cars
+      - Name 20 colors
+      - How many days in a week?
+      - How many months in a year?
+      - Show me something interesting
+      - Write something funny
+      - Name some animals
+      - Name a car brand
+
+  - intent: Ask_what_products
+    examples: |
+      - What products do you sell
+      - Tell me about your products
+      - What kind of items do you offer?
+      - What goods do you have in your store?
+      - what does the gym sell?
+      - What clothes do you have
+      - Have any caps,shirts, pants, tights, hoodies, shoes
+
+  - intent: Ask_discounts_specials
+    examples: |
+      - Do you have any ongoing deals?
+      - What sales are availible right now?
+      
+  - intent: Ask_are_products_affordable
+    examples: |
+      - Are your prices customer friendly?
+      - Are your prices expensive or cheap?
+      - Are your store rates fair price?
+      - Are your products affordable
+
+  - intent: Ask_any_free_products
+    examples: |
+      - Do you offer anything free?
+      - Any free giveaways?
+      - When do you offer free merchandise?
+      - How to get free merchandise
+      
+  - intent: Ask_most_popular_product
+    examples: |
+      - What's the most popular product you offer?
+      - Tell me about the most popular product you have?
+      - What's your best-selling product?
+
+  - intent: Ask_most_expensive_product
+    examples: |
+      - What's the most expensive product?
+      - Best selling products?
+
+  - intent: Ask_worst_product
+    examples: |
+      - Which product has the worst reviews?
+      - What is your worst selling products
+      - What product sells the least
+
+  - intent: Ask_sizes_on_offer
+    examples: |
+      - What sizes do you have available?
+      - How many sizes do you have
+      - What sizes do your clothes come in?
+
+  - intent: Ask_recommend_buy
+    examples: |
+      - What would you recommend I buy?
+      - Recommned what to buy?
+      - What should my first buy be?
+      - What would you recommend I buy as a beginner?
+      - What would you recommend I buy as an intermediary?
+      - What would you recommend I buy as an expert?
+
+     
+  - intent: Ask_arrival_time
+    examples: |
+      - How long before my purchased products arrive?
+      - How long before my bought clothes arrive?
+
+  - intent: Ask_late_fee
+    examples: |
+      - Is there a late fee?
+      - What if I come late to collect my order?
+
+  - intent: Ask_materials_used
+    examples: |
+      - What materials are used mostly?
+      - What are your clothes made of
+
+  - intent: Ask_collection_info
+    examples: |
+      - What information do I need to bring or provide when collecting my order?
+      - What to bring when I need to collect my order?
+
+  - intent: Ask_supplier_names
+    examples: |
+      - Who are your suppliers?
+      - What are your supplier names?
+
+  - intent: Ask_supplier_products
+    examples: |
+      - What do your suppliers provide?
+      - what do your wholsalers give you
+
+  - intent: Ask_supplier_count
+    examples: |
+      - How many current suppliers do you have?
+      - Whats the number of suppliers you have?
+
+  - intent: Ask_what_sets_apart_from_other_gyms
+    examples: |
+      - What sets you apart from other gyms in Pretoria?
+      - What can I get here I can't find elsewhere?
+      - What sets you apart from other gyms in the country?
+      - What sets you apart from other gyms in the province?
+      - What sets you apart from other gyms in the world?
+
+  - intent: Why_AVS_Fitness
+    examples: |
+      - Why choose AVS Fitness?
+      - Why choose this gym?
+      - Give me a reason to subscribe to AVS Fitness
+      - Convince me why AVS Fitness is the best gym club option
+
+  - intent: Ask_what_sets_AVS_apart
+    examples: |
+      - What sets AVS Fitness apart?
+      - Why AVS Fitness?
+      - Convince me to join the gym?
+
+  - intent: Ask_what_different_about_gym
+    examples: |
+      - What's different about your gym than others?
+      - How are you diffrent from Planet Fitness
+      - How are you different from Virgin Active
+      - Are you better than Planet Fitness or Virgin Active
+
+  - intent: Ask_what_unique_offer
+    examples: |
+      - What can I get here I can't find elsewhere?
+      - What unique offerings are at this gym club?
+      - Tell me all the niche aspects of AVS Fitness
+
+  - intent: Ask_how_different_from_competitors
+    examples: |
+      - How are you different from your competitors?
+      - How are you special from another gym
+
+  - intent: Ask_member_count
+    examples: |
+        - How many active members?
+        - How many have joined
+        - How many members are at the gym
+        - How's daily attendance
+
+  - intent: Ask_employee_count
+    examples: |
+       - How many employees do you have currently?
+       - What is the number of employees at avs fitnss gym?
+       - Tell me the number of employees managing the gym
+
+  - intent: Ask_protein_advice
+    examples: |
+       - Which Protein should I buy?
+       - Why Protein is important?
+       - Is protein good for you?
+       - Is protein bad for you
+       
+  - intent: Best_protein_brand
+    examples: |
+       - Best protein brand?
+       - Which protein do you recommend
+       - I'm looking for a protein brand to start off with
+
+  - intent: Ask_what_Is_Your_Store
+    examples: |
+      - Whats your store name?
+      - Whats your store called?
+      - Do you have an online store?
+      - What is AV Merch?
+      - Is there an online store?
+      - Where can I buy merchandise, products, clothes, stuff, gear?
+      - Where's your online store
+      - Do you have a shopping place on the system, application, site, website
+      - Tell me where to find your store
+      - Where can i purchase things, products, clothes, products, gear
+      - where can i buy stuff
+      - I want to buy something on your system 
+
+
+
+
+
+
+      
+
+
+      
+
++

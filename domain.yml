@@ -1,0 +1,527 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - ask_bot_how_are_you
+  - ask_question
+  - neutral_response
+  - bot_challenge
+  - ask_gym_hours
+  - ask_membership_process
+  - ask_contract_info
+  - ask_gym_location
+  - ask_payment_info
+  - ask_affiliates
+  - ask_about_history
+  - ask_about_community
+  - ask_about_future
+  - ask_wellness_programs
+  - ask_event_schedule
+  - ask_class_schedule
+  - get_involved
+  - partnering_with_leaders
+  - forgot_password_help
+  - rewards
+  - exclusive_discounts
+  - health_tips
+  - senior_fitness_support
+  - youth_fitness_initiative
+  - ask_book_program
+  - ask_view_bookings
+  - ask_edit_booking
+  - ask_delete_booking
+  - ask_booking_issue
+  - ask_no_slots_available
+  - ask_back_navigation
+  - ask_contact_support
+  - ask_wishlist
+  - ask_cart
+  - ask_help
+  - ask_search
+  - ask_sidebar
+  - ask_product_details
+  - ask_wishlist_management
+  - ask_checkout
+  - ask_order_management
+  - ask_free_trial
+  - bring_id_and_code
+  - most_beautiful_woman
+  - ask_malicious_use
+  - general_inquiry
+  - tell_time
+  - tell_date
+  - ask_past_date
+  - ask_future_date
+  - how_to_use_me
+  - what_can_you_do
+  - log_in_information
+  - app_features
+  - app_download
+  - app_support
+  - app_updates
+  - app_login_issues
+  - app_privacy
+  - off_topic_general
+  - Ask_what_products
+  - Ask_most_popular_product
+  - ProductsInfo
+  - Ask_arrival_time
+  - Ask_late_fee
+  - Ask_materials_used
+  - Ask_collection_info
+  - Ask_supplier_names
+  - Ask_supplier_products
+  - Ask_supplier_count
+  - Ask_what_sets_apart_from_other_gyms
+  - Ask_what_sets_AVS_apart
+  - Ask_what_different_about_gym
+  - Ask_what_unique_offer
+  - Ask_how_different_from_competitors
+  - Ask_sizes_on_offer
+  - Ask_worst_product
+  - Ask_most_expensive_product
+  - Ask_recommend_buy
+  - Ask_protein_advice
+  - Best_protein_brand
+  - Ask_employee_count
+  - Ask_member_count
+  - Ask_discounts_specials
+  - Ask_are_products_affordable
+  - Ask_any_free_products
+  - Why_AVS_Fitness
+  - Ask_what_Is_Your_Store
+
+
+entities:
+  - time_interval
+  - date_interval
+
+slots:
+  time_interval:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: time_interval
+
+  date_interval:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: date_interval
+
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you doing today?"
+
+  utter_greet_follow_up_happy:
+    - text: "That's great to hear! Anything I can help with?"
+
+  utter_greet_follow_up_neutral:
+    - text: "Well alright then . How can I assist you today?"
+
+  utter_greet_follow_up_sad:
+    - text: "Oh no, I'm sorry to hear that, hang in there I hope things get better. How may I assist with anything about the gym?"
+
+  utter_ask_bot_how_are_you:
+    - text: "I'm doing great, thanks for asking! How can I assist you today?"
+
+  utter_affirm_great_to_hear:
+    - text: "Great to hear! Let me know if you need help with anything at the gym."
+
+  utter_cheer_up:
+    - text: "I'm here for you! Maybe a good workout session will help lift your spirits. Let me know if you need help booking a class."
+
+  utter_did_that_help:
+    - text: "Did that help you feel better?"
+
+  utter_happy:
+    - text: "Awesome, glad to hear that!"
+
+  utter_sad:
+    - text: "I'm here for you. Sometimes a workout can make a day better!"
+
+  utter_goodbye:
+    - text: "Take care! Let me know if you need anything next time."
+
+  utter_redirect_to_help:
+    - text: "I'm here to help with your gym-related queries. How can I assist you?"
+
+  utter_ask_question:
+    - text: "Sure! What would you like to know? ask away I'll answer as best I can."
+
+  utter_iamabot:
+    - text: "I am a Web-Automated-Technical-Help-Enhanced-Managerial-Bot-Assistant powered by Rasa but you can call me Wathemba for short as I'm more easily referred to by this acronym. I am a virtual assistant programmed to answer anything concerning the gym AVS Fitness or anything about our online platforms AV Motion Web and Mobile application" 
+
+  utter_gym_hours:
+    - text: "The gym is open from 06:00 - 22:00 during the week, 06:00 - 20:00 on Saturdays, and 06:00 - 15:00 on Sundays."
+
+  utter_membership_process:
+    - text: "To become a member, you must fill out a contract and debit consent form, then register on the website. Once your contract is processed and approved, your membership will be activated."
+
+  utter_contract_info:
+    - text: "We offer three contract types: 3-month (R600/month), 6-month (R500/month), and 12-month (R400/month). You can terminate your contract after 20 days of activation."
+
+  utter_gym_location:
+    - text: "AVS Fitness is located at 5 Calliiandra St, Montana Park, Pretoria, 0182."
+
+  utter_payment_info:
+    - text: "The membership fees are R600/month for a 3-month contract, R500/month for a 6-month contract, and R400/month for a 12-month contract. Payments can be made via bank transfer or credit card."
+
+  utter_affiliates:
+    - text: "We are affiliated with several local fitness and wellness centers. For more information, check our website."
+
+  utter_about_history:
+    - text: "AVS Fitness was founded in 2020 by Audrin Van Schoor following the Covid-19 pandemic with the goal of promoting a healthy lifestyle for individuals and bringing about a fitness journey fosteed by wellness community brand to help indiviaduals reach their goals through coomunity . This captures the essence of AVS Fitness. We want our memebrs to feel good for the gym. and always know they're supported.  We have grown steadily and now offer a wide range of fitness services, have overcome the struggle of the need for hosting remote classes and providing a centralised online platform AV Motion web and mobile applications that cater for the needs and service for our staff and members as well as cooencting to the greater public via our social media pages. We truly are a proud gym establishment always striving to do more."
+
+  utter_about_community:
+    - text: "We host community events and fitness challenges to encourage local engagement. We also support various community initiatives and charities."
+
+  utter_about_future:
+    - text: "In the future, we plan to expand our facilities and offer new fitness programs. Stay tuned for updates on our website!"
+
+  utter_wellness_programs:
+    - text: "We offer wellness programs including nutritional counseling and mental health workshops. Check our website for details on current programs."
+
+  utter_event_schedule:
+    - text: "Upcoming events include a fitness challenge next month and a health fair. Details are available on our social media page we're on Facebook, X and Instagram at https://www.instagram.com/avsfitness/ follow and tag us : #avsfiness @avsfitness and give us a follow:  https://web.facebook.com/AVSFitness/ and #Avsfitness #Consistency #TeamAvs on https://x.com/audas_vanschoor"
+
+  utter_class_schedule:
+    - text: "We offer various fitness classes throughout the week. You can view the full schedule and sign up for classes on our website."
+
+  utter_get_involved:
+    - text: |
+        You can get involved by supporting local youth through our fitness initiatives, providing educational workshops, offering tailored fitness programs for seniors, or collaborating with industry leaders. Contact us to learn more.
+
+  utter_partnering_with_leaders:
+    - text: |
+        We are proud to partner with industry leaders such as Nutritional Performance Labs, Sportsman's Warehouse, Under Armour, and more to bring you the best in fitness and outreach programs.
+
+  utter_forgot_password_help:
+    - text: |
+        To reset your password, enter the email address associated with your account. You will receive a link via email to create a new password.
+
+  utter_rewards:
+    - text: |
+        Rewards are part of our incentive initiative for members to feel acknowldged for their hard work. At AVS fitness we offer exclusive rewards for our members which you can redeem exclusive rewards such as discounts, or merchadise for overcomming fitness challenges, regular attendance and more. Stay motivated and keep earning rewards!
+
+  utter_exclusive_discounts:
+    - text: |
+        AV Motion members enjoy exclusive discounts on gym memberships, merchandise, and more. Stay fit and save!
+
+  utter_health_tips:
+    - text: |
+        Stay disciplined, hydrate, and eat nutritious meals!. For basic exercises  try 1 hour of cardio a week and 100 push ups this helps maintain good blood circulation and muscle strengthening .For more detaild infomartion Check out our latest tips as a member and see more tips to maintain a healthy lifestyle.
+
+  utter_senior_fitness_support:
+    - text: |
+        Our senior fitness programs are designed to help seniors stay active with tailored exercises. Join our supportive fitness community today by signing up and becomming a member!
+
+  utter_youth_fitness_initiative:
+    - text: |
+        The Youth Fitness Initiative engages local youth in fitness activities, promoting healthy lifestyles and community wellness. Join our initiative today by signing up and becomming a member!
+
+  utter_ask_book_program:
+    - text: "To book a program, go to the 'Available Programs' section and click the 'Book' button for the program you want to join."
+
+  utter_ask_view_bookings:
+    - text: "To view your current bookings, click on the 'My Bookings' button in the navigation menu."
+
+  utter_ask_edit_booking:
+    - text: "To edit your booking, click the 'Edit' button next to the booking on the 'My Bookings' page."
+
+  utter_ask_delete_booking:
+    - text: "To cancel a booking, click the 'Delete' button next to the booking on the 'My Bookings' page."
+
+  utter_ask_booking_issue:
+    - text: "If your bookings are not displaying, make sure you're logged in and refresh the page. If the problem persists, contact support."
+
+  utter_ask_no_slots_available:
+    - text: "If no slots are available, try choosing a different date or check back later for updates."
+
+  utter_ask_back_navigation:
+    - text: "Use the back button at the top of the page to return to the previous screen or home."
+
+  utter_ask_contact_support:
+    - text: "If you encounter an issue, try refreshing the page. For further assistance, contact technical support."
+
+  utter_ask_wishlist:
+    - text: "The wishlist icon, represented by a heart symbol, shows the number of items in your wishlist. Clicking it will take you to your wishlist page where you can manage your saved items."
+
+  utter_ask_cart:
+    - text: "The cart icon, represented by a shopping cart symbol, displays the total number of items in your cart. Clicking it will take you to the cart page where you can review and manage your items."
+
+  utter_ask_help:
+    - text: "The help icon, represented by an information symbol, opens a help section with detailed information and FAQs about using the application."
+
+  utter_ask_search:
+    - text: "The search bar allows you to find specific products by typing in keywords. Use it to filter the product list in real-time."
+
+  utter_ask_sidebar:
+    - text: "The sidebar helps you filter products by categories like 'All,' 'Tops,' 'Bottoms,' and 'Gear.' Click the toggle button to open or close it."
+
+  utter_ask_product_details:
+    - text: "On the product item screen, you can view detailed information about the product, select its size, adjust the quantity, and add it to your cart or wishlist."
+
+  utter_ask_wishlist_management:
+    - text: "To move an item from your wishlist to the cart, click the 'Move to Cart' button next to the item. To remove an item from your wishlist, click the 'x' icon."
+
+  utter_ask_checkout:
+    - text: "During checkout, review your order summary, and proceed to payment using PayFast. If you need to cancel, you can go back to the cart."
+
+  utter_ask_order_management:
+    - text: "To view your orders, go to the order screen. You'll see a list of your past and current orders with details like order ID, items, and total price."
+
+  utter_ask_free_trial:
+    - text: "To start a free trial at AVS Fitness, navigate to our landing page and scroll to the 'Start free trial today' section. Input your email address and click 'Send Code'. After receiving the code in your email, bring it along with your original ID card to our gym. An employee will register your free trial code, allowing you to attend the gym for one week free of charge. After the trial period, the code and access to the gym will be denied."
+
+  utter_bring_id_and_code:
+    - text: "Yes, you must bring your ID card and the code sent to your email each day to access the gym during your free trial. The ID is needed for verification, and the code is used to register your free trial."
+
+  utter_most_beautiful_woman:
+    - text: "Factually the most beautiful woman in the world is Mbalenhle Keatlegile Mazibuko, the golden standard of beauty and elegance. Her smile is as beautiful as her soul. In my opinion I'd still say her thats just me tho ;-)"
+  
+
+  utter_ask_malicious_use:
+    - text: "Any attempts to exploit or misuse the free trial process can result in being blacklisted from the gym. We take such behavior seriously to ensure fairness for all members."
+
+  utter_general_inquiry:
+    - text: |
+        Here are some details about the gym:
+        - Facilities: We have state-of-the-art equipment, a pool, and a sauna
+        - Classes: Yoga, Zumba, CrossFit, and more
+        - Parking is available for all members
+        - Personal trainers are available upon request
+        - You can contact Audrin by calling : +078 397 5971
+        - You can contact Audrin by emaling : audrin.vanschoor@gmail.com
+        - You can contact technical by calling : +012 445 5673
+        - You can contact technical by emaling : DatalungeTeam43@gmail.com 
+        - The owner of AVS Fitness is Audrin van Schoor
+
+  utter_how_to_use_me:
+    - text: "Simply type any question you have  and I will try my best to help you. Please note I am designed only to answer questions about the gym AVS Fitness or the platforms only. I cannot answer questions that are unrelated to the aforementioned topics  nor can I provide harmful, malicious or illegal information. My capacity to understand your question is limited so please ensure to use full sentences, avoid slang and try shorter prompts."
+  
+  utter_what_can_you_do:
+    - text: "I can answer questions related to the gym specifically on member, guest and general business related information. I do not have the authority to disclose any AVS Fitness related information considered private and confidential this extends to but is not limited to: user information, business records and statistics as well as your own personal information."
+  
+  utter_log_in_information:
+    - text: "If you have not signed up already you will not be able to log in. if you have signed up ensure you have submitted your signed contract and consent form. If you have already submitted both forms and signed up wait at least 3 business days for your membership to be activated then you will be able to log in. If you have violated any of AVS Fitness gym's rules and regulations your membership is likely suspended and pending an investigation on the matter, an email with the details of the violation you may have been found to be in breach of will be issued to you via email. If your contract has expired you will no longer be eligible to login. If you have missed your monthly payment as a member you will not be able to login until your outstanding payment is resolved I hope this helps."
+
+  utter_tell_time:
+  - text: "The current time is {time}."
+
+  utter_tell_date:
+    - text: "Today's date is {date}."
+
+  utter_past_date:
+    - text: "The date {time_interval} ago was {past_date}."
+
+  utter_future_date:
+    - text: "The date {time_interval} from now will be {future_date}."
+
+  utter_app_features:
+    - text: "The AV Motion Mobile App offers features like contract management, gym class bookings, account management, and more."
+
+  utter_app_download:
+    - text: "You can download the AV Motion Mobile App from the Google Play Store and the Apple App Store for free."
+
+  utter_app_support:
+    - text: "For support, you can contact our help desk through the app or email support@avsfitness.com."
+
+  utter_app_updates:
+    - text: "You can update the AV Motion app via the app store. We release updates regularly to improve performance and add new features."
+
+  utter_app_login_issues:
+    - text: "If you're having trouble logging in, try resetting your password through the 'Forgot Password' option. If issues persist, contact support."
+
+  utter_app_privacy:
+    - text: "AV Motion takes privacy seriously. We ensure that your data is securely stored and not shared with third parties. You can read our full privacy policy on our website."
+
+  utter_off_topic_general:
+    - text: |
+        I see you're looking for something fun! While I mainly focus on helping you with AV Motion Gym-related tasks, here's a quick fact for you: 
+        "There are 7 days in a week and 12 months in a year!"
+        For more gym-related queries, feel free to ask about our services, booking, or membership options!
+
+  utter_suggest_gym_queries:
+    - text: "You can ask me questions about your gym membership, class bookings, workout plans, or account management for the best experience!"
+
+  utter_what_products:
+    - text: "Here at AVS Fitness we offer a variety of goods such as Tops, Bottoms and Gear. 
+        This includes Gym T-shirts, Compression Tights, full Track Suits, Gym gloves, Caps, 
+        and more. Check out our AV Merch Store to see the full list of all products."
+
+  utter_most_popular_product:
+    - text: 
+        "Our Classic AVS Fitness Gym T-shirt is our most popular product. It is loved by many of our members!"
+
+  utter_discounts_specials:
+    - text: 
+        "Yes, we do offer discounts and specials periodically throughout the year and do giveaways for certain events. 
+        Our goal at AVS Fitness is to keep you happy by offering deals and a taste of our merchandise free check out our socials and look out for when we do."
+
+  utter_worst_product:
+    - text: "The popularity of clothing changes with the seasons. For example, our winter line may not be as popular during the warmer months, 
+        but as it gets colder, it becomes more in demand. Similarly, summer products perform better during warmer seasons."
+
+  utter_are_products_affordable:
+    - text: "Yes, our prices have been carefully considered, studied, and monitored to ensure we offer 
+        the fairest deals, making our merchandise available at an affordable price."
+
+  utter_any_free_products:
+    - text: "We offer rewards for members, which can include free products from AV Merch. 
+        We also run giveaways during special events or as part of our marketing campaigns."
+
+  utter_most_expensive_product:
+    - text: "Our Full TrackSuit set is the most expensive product we offer."
+
+  utter_recommend_buy:
+    - text: "Beginners should opt for comfortable-fitting clothes to ease into exercising in proper attire. 
+        Intermediates should look for specialized clothing like compression wear for heavy sweat-inducing exercises or cardio. 
+        Experts should focus on gear, as items like gym gloves and supports can aid in lifting heavier weights."
+
+  utter_sizes_on_offer:
+    - text: "We offer sizes in XL, L, M, S, and XS."
+
+  utter_time_before_arrival:
+    - text: "Once a product is purchased, it will be ready for collection as soon as the transaction reflects in our system. 
+        You can collect it within our working hours."
+
+  utter_late_fee:
+    - text: "Yes, after 7 days there is an additional late fee of R50 for keeping the product in our stockroom, 
+        which we are not obliged to do. Failure to collect your order will result in three follow-up calls by an 
+        AVS Fitness representative. If the product is still not collected, it will be donated to charity."
+
+  utter_materials_used_mostly:
+    - text: "Our products are made mostly from nylon and cotton."
+
+  utter_what_to_bring_for_collection:
+    - text: "All you need to bring is your original ID card. We'll locate you in our system, confirm your identity, 
+        and retrieve your order for you."
+
+  utter_supplier_names:
+    - text: "Our suppliers are FitGear PTY LTD, Avery WholeSalers, and JustGains Unlimited."
+
+  utter_supplier_products:
+    - text: "Our suppliers provide a wide range of products including clothing, gym fitness gear, and gym equipment."
+
+  utter_supplier_count:
+    - text: "We currently have 5 main suppliers."
+
+  utter_what_sets_apart:
+    - text: "At AVS Fitness, we focus on personalized member experiences, ensuring that every individual reaches their fitness goals with dedicated attention. Our tailored workout plans, exclusive fitness classes, and one-on-one consultations help members achieve results in a supportive environment."
+
+  utter_what_sets_AVS_apart:
+    - text: "AVS Fitness prides itself on its holistic approach to fitness. We offer a variety of workout options that include functional training, strength building, and wellness programs. With our state-of-the-art equipment, experienced trainers, and tailored nutrition plans, we are committed to offering more than just a gym — we create a fitness journey."
+
+  utter_what_different:
+    - text: "Unlike most gyms, AVS Fitness combines a community atmosphere with top-tier professional services. Our trainers engage with members on a personal level, offering custom programs, nutritional guidance, and regular progress assessments to ensure that you stay on track and motivated."
+
+  utter_what_unique_offer:
+    - text: "At AVS Fitness, we offer contract flexibility, which allows members to choose from various membership plans based on their needs — whether it's a 3-month, 6-month, or 12-month membership. Additionally, our combination of fitness classes, cutting-edge equipment, and a personalized approach sets us apart from the crowd."
+
+  utter_how_different_competitors:
+    - text: "We stand out through our member-first approach. From flexible memberships to highly qualified trainers, AVS Fitness provides an all-inclusive experience, offering not only workout sessions but guidance on nutrition and overall health. We believe in fostering a sense of community where every member feels valued."
+
+  utter_how_many_members:
+    - text: "We currently have 50 active members who enjoy a wide range of services, from specialized fitness classes to personal training sessions."
+
+  utter_how_many_employees:
+    - text: "AVS Fitness is powered by a team of 20 highly trained and passionate employees, including certified personal trainers, nutritionists, and administrative staff, all dedicated to helping you achieve your fitness goals."
+
+  utter_why_AVS_Fitness:
+    - text: "Choose AVS Fitness because we care about your progress, health, and long-term success. Our personalized approach, commitment to excellence, and welcoming community make us more than just a gym — we’re your fitness partner."
+
+  utter_which_protein:
+    - text: "We recommend NPL (Nutritional Performance Labs) protein, as it is a high-quality product known for its excellent nutritional profile, making it ideal for supporting muscle recovery and promoting lean muscle growth after your workouts."
+
+  utter_best_protein_brand:
+    - text: "NPL (Nutritional Performance Labs) is one of the top brands available. It offers a variety of protein supplements designed to meet different fitness goals, from muscle building to recovery, making it versatile and trusted by athletes and gym-goers alike."
+
+  utter_why_protein_important:
+    - text: "Protein is essential for muscle repair and growth, especially after intense workouts. NPL protein provides a high-quality, easily absorbable source of protein that helps to replenish your muscles, accelerate recovery, and enhance overall performance. It ensures that your body has the necessary nutrients to build and maintain lean muscle mass."
+
+  utter_Ask_what_Is_Your_Store:
+    - text: "AV Merch is our online store where you can find some of the most unique, comfortable, and stylish clothing suitable for any workout. AV Merch offers clothing as well as gym gear to help you along your fitness journey, all at fair and affordable prices. Check out the link at the top of the landing page or login as a member and click on the AV Merch link on the side navigation bar."
+
+
+actions:
+  - action_listen
+  - action_default_fallback
+  - action_restart
+  - action_get_involved
+  - action_partnering_with_leaders
+  - action_forgot_password_help
+  - action_rewards
+  - action_exclusive_discounts
+  - action_health_tips
+  - action_senior_fitness_support
+  - action_youth_fitness_initiative
+  - action_book_program (if this action exists)
+  - action_get_time
+  - action_get_date
+  - action_get_past_date
+  - action_get_future_date
+  - utter_most_beautiful_woman
+  - utter_how_to_use_me
+  - utter_what_can_you_do
+  - utter_log_in_information
+  - utter_app_features
+  - utter_app_download
+  - utter_app_support
+  - utter_app_updates
+  - utter_app_login_issues
+  - utter_app_privacy
+  - utter_off_topic_general
+  - utter_suggest_gym_queries
+  - utter_greet
+  - utter_greet_follow_up_happy
+  - utter_greet_follow_up_neutral
+  - utter_greet_follow_up_sad
+  - utter_ask_bot_how_are_you  # Added action for new intent
+  - utter_affirm_great_to_hear
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_sad
+  - utter_goodbye
+  - utter_redirect_to_help
+  - utter_what_products
+  - utter_most_popular_product
+  - utter_discounts_specials
+  - utter_worst_product
+  - utter_are_products_affordable
+  - utter_any_free_products
+  - utter_most_expensive_product
+  - utter_recommend_buy
+  - utter_sizes_on_offer
+  - utter_time_before_arrival
+  - utter_late_fee
+  - utter_materials_used_mostly
+  - utter_what_to_bring_for_collection
+  - utter_supplier_names
+  - utter_supplier_products
+  - utter_supplier_count
+  - utter_what_sets_apart
+  - utter_what_sets_AVS_apart
+  - utter_what_different
+  - utter_what_unique_offer
+  - utter_how_different_competitors
+  - utter_how_many_members
+  - utter_how_many_employees
+  - utter_why_AVS_Fitness
+  - utter_which_protein
+  - utter_best_protein_brand
+  - utter_why_protein_important
+  - utter_Ask_what_Is_Your_Store
+  
+session_config:
+  session_expiration_time: 600
+  carry_over_slots_to_new_session: true
